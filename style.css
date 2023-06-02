@@ -1,0 +1,142 @@
+@keyframes moving {
+    0% {
+        margin-top:-30px;
+    }
+    50% {
+        margin-top:30px;
+    }
+    100% {
+        margin-top:-30px;
+    }
+}
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'SUITE-Regular';
+    cursor: default;
+}
+#loading-char {
+    position: absolute;
+    width: 40%;
+    max-width: 400px;
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    animation: moving 7s infinite;
+    transition: 0.5s;
+}
+
+
+#main-menu {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    z-index: 3000;
+}
+
+#ready-menu {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    z-index: 3000;
+}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#status {
+    transition: 0.5s;
+}
+
+body {
+    margin: 0;
+}
+
+#player {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+}
+
+#mel_status {
+    font-family: 'SUITE-Regular';
+    position: fixed;
+    padding: 40px;
+    display: block;
+    font-size: 30px;
+    font-weight: bolder;
+    opacity: 0.7;
+    border-radius: 20px;
+    z-index: 999;
+    top: 100px;
+    right: 100px;
+    transform: translateX(-50%);
+    background: white;
+}
+
+#status {
+    font-family: 'SUITE-Regular';
+    position: fixed;
+    padding: 20px;
+    display: block;
+    font-size: 30px;
+    font-weight: bolder;
+    opacity: 0.7;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 999;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+}
+
+.clear_animation {
+    background: #aaffaa !important;
+}
+
+.fail_animation {
+    background: #ffaaaa !important;
+}
+
+#barrier {
+    background: black;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 30;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#navbar {
+    padding: 15px;
+    position: fixed;
+    z-index: 30000;
+    background: white;
+    display: block;
+}
+
+#navbar>#logo {
+    font-size: 20px;
+}
+
+#music_select {
+    display: none;
+}

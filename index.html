@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KARA Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script type='text/javascript' src='/eel.js'></script>
+
 </head>
 <body>
-    <a href="player.html">SING</a>
-    <!-- <div id="player"></div> -->
-    <!-- <script src="script.js"></script> -->
+    <div id="loading">
+        <img src="login.png" id="loading-char">
+    </div>
+    <div id="main-menu" style="display: none;">
+        <h1>KARA Player</h1>
+        <span style="font-size: 20px;" onclick="ms.click()">이곳을 눌러 음악 선택</span>
+        <input type="file" id="music_select">
+    </div>
+    <div id="ready-menu" style="display: none">
+        <p>회면을 클릭하여 음악 재생</p>
+    </div>
+    <div id="barrier"></div>
+    <div id="player"></div>
+    <p id="status"></p>
+    <script src="https://cdn.jsdelivr.net/npm/aubiojs@0.1.1/build/aubio.min.js"></script>
+    <script src="evaluate.js"></script>
+    <script src="player.js"></script>
+    <script src="gui.js"></script>
 </body>
 </html>
