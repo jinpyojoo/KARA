@@ -306,7 +306,7 @@ body {
     position: fixed;
     width: 100vw;
     height: 10px;
-    bottom: 50px;
+    bottom: 100px;
     margin: auto;
 }
 #point-bar-clearzone {
