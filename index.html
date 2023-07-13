@@ -13,24 +13,38 @@
         <img src="login.png" id="loading-char">
     </div>
     <div id="navbar">
-        <span>KARA Player</span>
+        <span>Kara Player</span><span style="font-size: 13px;">V2</span>
     </div>
-    <input id="disable-key" style="display: none;">
-    <div id="main-menu" style="display: none;">
-        <h1>KARA Player</h1>
-        <span style="font-size: 20px; cursor: pointer; background: #efefef; border-radius: 5px; padding: 10px;" onclick="ms.click()">이곳을 눌러 음악 선택</span><br>
-        <div style="position: absolute; margin-top: 30px;"><a href="https://github.com/jinpyojoo/KARA-official--chart/tree/main">공식 채보 다운받기</a></div>
+    <input id="disable-key" style="display: none">
 
-        <input type="file" id="music_select">
+    <div id="main-menu" style="display: none;">
+        <!-- <div class="song-info">
+            <div id="song-name"></div>
+            <div id="song-desc"></div>
+        </div> -->
+        <div class="song-list">
+            <div id="song-add-btn" style="padding: 5px 10px 5px 5px; border-radius: 10px; background: white; width: fit-content;" onclick="ms.click()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" width="25"><path d="M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z"/></svg>
+                <span style="vertical-align: super;">음원 추가하기</span>
+            </div>
+            <input type="file" id="music_select">
+            <div id="list-musics"></div>
+        </div>
     </div>
+
+
     <div id="ready-menu" style="display: none">
         <div id="ready-grid">
-            <div id="grid-song-info"><div>곡 정보</div><div id="songname"></div></div>
-            <div id="grid-tempo-speed"><div>템포 속도<div><div style="margin-top: 10px;display: flex; gap: 20px;"><div id="down-speed">-</div><div id='tempo-speed'>1.0x</div><div id="up-speed">+</div></div></div></div></div>
-            <div id="grid-tempo-accuracy"><div>템포 민감도<div><div style="margin-top: 10px;display: flex; gap: 20px;"><div id="down-accuracy">-</div><div id='accuracy'>0.5s</div><div id="up-accuracy">+</div></div></div></div></div>
+            <div id="grid-song-info"><div>곡 정보</div><br><div id="songname"></div></div>
+            <div id="grid-tempo-speed"><div>템포 속도</div><div style="margin-top: 10px;display: flex; gap: 20px;"><div id="down-speed">-</div><div id='tempo-speed'>1.0x</div><div id="up-speed">+</div></div></div>
+            <div id="grid-tempo-accuracy"><div>템포 민감도</div><div style="margin-top: 10px;display: flex; gap: 20px;"><div id="down-accuracy">-</div><div id='accuracy'>0.5s</div><div id="up-accuracy">+</div></div></div>
+        </div>
+        <div id="grid-permission">
+            <div id="mic-status"><strong>마이크 입력</strong></div><br>
+            <div id="mic-status-name"></div>
         </div>
         <div id="grid-notice">
-            <strong>참고</strong><br>원할한 인터넷 상태를 유지시켜주세요.<br>모바일 데이터 환경에서는 많은 비용이 발생할 수 있습니다.<br>템포 민감도는 대부분의 경우에서 0.5가 적당합니다.
+            <strong>참고</strong><br><br>원할한 인터넷 상태를 유지시켜주세요.<br>모바일 데이터 환경에서는 많은 비용이 발생할 수 있습니다.<br>템포 속도는 대부분의 경우에서 0.5가 적당합니다.
         </div>
         <div id="grid-start"><div>시작하기</div></div>
         
@@ -51,6 +65,15 @@
     </div>
     <div id="player"></div>
     <p id="status"></p>
+    <div id="volume-wrapper">
+        <div id="volume-up">
+            +
+        </div>
+        <div id="volume-text">100%</div>
+        <div id="volume-down">
+            -
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/aubiojs@0.1.1/build/aubio.min.js"></script>
     <script src="evaluate.js"></script>
     <script src="player.js"></script>

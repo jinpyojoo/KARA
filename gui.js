@@ -9,7 +9,7 @@ fileParser = ()=>{
         var reader = new FileReader();
         reader.readAsText(file, "UTF-8");
         reader.onload = function (evt) {
-            load_music(evt.target.result)
+            save_music(evt.target.result)
             return "OK"
         }
         reader.onerror = function (evt) {

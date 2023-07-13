@@ -19,11 +19,20 @@
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'PFStardust';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .end {
     background: white !important;
 }
+
 * {
-    font-family: 'Pretendard';
+    font-family: 'SUITE-Regular';
     cursor: default;
     user-select: none;
 }
@@ -41,13 +50,11 @@
 
 
 #main-menu {
-    width: max-content;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    z-index: 3000;
+    max-width: 800px;
+    margin: auto;
 }
+
+
 
 @media screen and (max-width: 600px){
     #ready-grid {
@@ -78,7 +85,26 @@
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 80px 20px 10px 20px;
+    padding: 0px 20px 10px 20px;
+}
+#volume-wrapper {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    position:fixed;
+    left: 30px;
+    color: black;
+    font-weight: bolder;
+    top: 50%;
+    z-index: 300;
+    transform: translateY(-50%);
+    display: none;
+    opacity: 0.5;
+}
+
+#volume-wrapper > div {
+    text-align: center;
+    padding: 10px;
 }
 
 #tempo-speed, #accuracy {
@@ -102,7 +128,13 @@
     padding: 20px;
     border-radius: 10px;
     margin: 0px 20px 0px 20px;
+}
 
+#grid-permission {
+    background: #efefef;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0px 20px 10px 20px;
 }
 
 #interlude-logo {
@@ -167,6 +199,7 @@
 
 body {
     margin: 0;
+    background: white;
 }
 
 #player {
@@ -218,14 +251,11 @@ body {
 }
 
 #barrier {
-    background: black;
-    opacity: 0.3;
     width: 100%;
     height: 100%;
     position: fixed;
     z-index: 30;
     transition: 0.5s;
-    top: 0;
     left: 0;
     display: none;
 }
@@ -248,21 +278,28 @@ body {
     left: 50%;
     color: white;
     font-weight: 900;
-    font-size: 70px;
+    font-size: 50px;
     top: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     transform: 1s;
 }
+@font-face {
+    font-family: 'intelone-mono-font-family-regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 
 #navbar {
+    font-family: 'intelone-mono-font-family-regular';
     padding: 20px;
-    width: 100%;
-    position: fixed;
+    font-size: 20px;
     z-index: 30000;
-    background: black;
-    color: white;
+    color: black;
     display: block;
+    max-width: 800px;
+    margin: auto;
 }
 
 #navbar>#logo {
@@ -275,8 +312,8 @@ body {
 
 #status-bar {
     height: 10px;
-    background: linear-gradient(45deg, white 85%, transparent);
-    margin-top: 55px;
+    background: white;
+    opacity: 0.3;
 }
 .status-bar-interlude {
     height: 10px;
@@ -305,6 +342,7 @@ body {
 #point-bar-wrapper {
     position: fixed;
     width: 100vw;
+    opacity: 0.5;
     height: 10px;
     bottom: 100px;
     margin: auto;
@@ -328,4 +366,26 @@ body {
     text-align: right;
     padding-bottom: 10px;
     font-size: 20px;
+}
+#song-add-btn {
+    background: white;
+    box-shadow: black 0px 0px 5px;
+}
+#song-add-btn, #song-add-btn > * {
+    cursor:pointer;
+}
+#list-musics > div {
+    margin-top: 20px;
+    background: white;
+    box-shadow: black 0px 0px 5px;
+    width: available;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+
+.song-list {
+    padding: 10px;
 }
