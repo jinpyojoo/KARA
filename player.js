@@ -177,7 +177,6 @@ function onPlayerStateChange(event) {
     }
     if (event.data == 1) {
         document.getElementById('volume-wrapper').style.display = 'block'
-        document.getElementById('player').style.height = player.getSize()['height'] + "px"
         document.getElementById('volume-up').addEventListener('click', (e) => {
             console.log('press')
             if (player.getVolume() >= 0 && player.getVolume() < 100) {
