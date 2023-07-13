@@ -13,29 +13,17 @@
         margin-top:-30px;
     }
 }
-@font-face {
-    font-family: 'SUITE-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'PFStardust';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 .end {
     background: white !important;
 }
 
 * {
-    font-family: 'SUITE-Regular';
+    font-family: 'pretendard';
     cursor: default;
     user-select: none;
 }
+
 #loading-char {
     position: absolute;
     width: 40%;
@@ -90,7 +78,7 @@
 #volume-wrapper {
     background: white;
     padding: 10px;
-    border-radius: 10px;
+    
     position:fixed;
     left: 30px;
     color: black;
@@ -124,16 +112,16 @@
 
 #grid-notice {
     word-break: keep-all;
-    background: #efefef;
+    background: rgba(255,255,255,0.2);
     padding: 20px;
-    border-radius: 10px;
+    
     margin: 0px 20px 0px 20px;
 }
 
 #grid-permission {
-    background: #efefef;
+    background: rgba(255,255,255,0.2);
     padding: 20px;
-    border-radius: 10px;
+    
     margin: 0px 20px 10px 20px;
 }
 
@@ -142,20 +130,20 @@
 }
 
 #grid-tempo-speed {
-    background: #efefef;
+    background: rgba(255,255,255,0.2);
     padding: 20px;
-    border-radius: 10px;
+    
 }
 #grid-tempo-accuracy {
-    background: #efefef;
+    background: rgba(255,255,255,0.2);
     padding: 20px;
-    border-radius: 10px;
+    
 }
 
 #grid-song-info {
-    background: #efefef;
+    background: rgba(255,255,255,0.2);
     padding: 20px;
-    border-radius: 10px;
+    
 }
 
 #grid-start, #grid-start > div {
@@ -181,7 +169,7 @@
 #down-speed, #up-speed, #up-accuracy, #down-accuracy {
     border-radius: 5px;
     font-size: 30px;
-    background: #fefefe;
+    background: rgba(255,255,255,0.4);
     padding: 5px;
     cursor: pointer;
 }
@@ -369,23 +357,33 @@ body {
 }
 #song-add-btn {
     background: white;
-    box-shadow: black 0px 0px 5px;
 }
 #song-add-btn, #song-add-btn > * {
     cursor:pointer;
 }
 #list-musics > div {
-    margin-top: 20px;
-    background: white;
-    box-shadow: black 0px 0px 5px;
+    margin-top: 10px;
+    background: #f0f0f0;
+    color: black;
     width: available;
     font-size: 20px;
     padding: 10px;
     cursor: pointer;
-    border-radius: 10px;
-    
+}
+#list-musics > div > * {
+    font-weight: normal !important;
+    margin: 0 !important;
 }
 
 .song-list {
     padding: 10px;
+}
+
+#ready-menu {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    width: calc(100% - 20px);
+    top: 70px;
 }
