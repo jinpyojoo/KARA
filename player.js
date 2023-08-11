@@ -153,9 +153,7 @@ load_music = (data) => {
 play3 = 0
 skipped = 0
 function onPlayerStateChange(event) {
-    if (event.data == 3 && play3 == 1){
-        location.reload()
-    } else if (event.data == 3){
+    if (event.data == 3){
         play3 = 1
     }
     if (event.data == 1) {
